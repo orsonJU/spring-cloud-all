@@ -60,6 +60,11 @@ spring.profiles.active -> profile
 # 某个微服务启动时候需要加载配置，如下的配置会在启动的时候组装url:https://host:port/app1-dev.properties来向config服务器读取配置
 spring.application.name=app1
 spring.profiles.active=dev
+
+# 告诉微服务配置中心的地址，默认是http://localhost:8888
+spring.cloud.config.uri=http://localhost:8888
+# 告诉微服务需要去获取的profile配置是哪个
+spring.cloud.config.profile=dev
 ```
 
 
